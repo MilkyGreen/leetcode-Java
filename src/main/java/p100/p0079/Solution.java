@@ -75,7 +75,7 @@ public class Solution {
         // 标记使用过
         used[currRow][currCol] = true;
 
-        // 继续增加下一个字符，有上下左右四种可能
+        // 继续增加下一个字符，有上下左右四个方向
         if (hasNext(currRow - 1, currCol)) {
             if(traceBack( currRow - 1, currCol, index+1)){
                 return true;
@@ -125,7 +125,10 @@ public class Solution {
 
     public static void main(String[] args) {
         Solution solution = new Solution();
-        char[][] board = {{'A', 'B', 'C', 'E'}, {'S', 'F', 'C', 'S'}, {'A', 'D', 'E', 'E'}};
+        char[][] board = {
+                {'A', 'B', 'C', 'E'},
+                {'S', 'F', 'C', 'S'},
+                {'A', 'D', 'E', 'E'}};
         System.out.println(solution.exist(board, "ABCB"));
     }
 
