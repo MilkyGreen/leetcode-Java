@@ -36,7 +36,7 @@ public class Solution {
         ListNode preLeft = dummy;
 
         while (left != null){
-            if(left.val >= x){ // left比目标大
+            if(left.val >= x){ // left比目标大,停止遍历
                 // 需要找right
                 if(right == null){// 第一次给right赋值，取left的next
                     preRight = left;
@@ -84,7 +84,7 @@ public class Solution {
         node2.next = node5;
         node5.next = node22;
         Solution solution = new Solution();
-//        ListNode partition = solution.partition(node1, 3);
+        solution.partition(node1, 3);
 
         solution.partition(new ListNode(1), 0);
     }
