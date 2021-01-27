@@ -37,8 +37,8 @@ public class Solution {
         int pre = 1; // 上个个糖果数量
         for (int i = 1; i < ratings.length; i++) {
             if (ratings[i] >= ratings[i - 1]) {
-                pre = ratings[i] == ratings[i - 1] ? 1 : pre+1; // 相当的就发一个
-                count+=pre; // 加上当前的
+                pre = ratings[i] == ratings[i - 1] ? 1 : pre + 1; // 相当的就发一个
+                count += pre; // 加上当前的
                 increaseCount = pre; // 如果一直升序，pre就是升序数量，如果是从相当或降序恢复，则从1开始
                 decreaseCount = 0;// 降序归0
             } else {
@@ -48,6 +48,42 @@ public class Solution {
                 }
                 count += decreaseCount; // 给降序的每个人都发个糖，集体涨薪。
                 pre = 1; // 下次的升序又从1开始了，糖也是1个。
+            }
+        }
+        return count;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    public int candy1(int[] ratings) {
+        int pre = 1, increaseCount = 1, decreaseCount = 0,count = 1;
+        for (int i = 1; i < ratings.length; i++) {
+            if (ratings[i] >= ratings[i - 1]) {
+                pre = ratings[i] == ratings[i - 1] ? 1 : pre + 1;
+                increaseCount = pre;
+                count+= pre;
+                decreaseCount = 0;
+            }else {
+                decreaseCount++;
+                if(decreaseCount == increaseCount){
+                    decreaseCount++;
+                }
+                count+=decreaseCount;
+                pre = 1;
             }
         }
         return count;
