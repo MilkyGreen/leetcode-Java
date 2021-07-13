@@ -1,7 +1,5 @@
 package weekcontest.NO55;
 
-import p300.p210.Solution;
-
 /**
  */
 public class Solution1 {
