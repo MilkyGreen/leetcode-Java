@@ -10,7 +10,7 @@ public class Solution {
     // 最长严格上升子序列
     public int lengthOfLIS(int[] nums) {
         int l = nums.length;
-        int[] dp = new int[l]; // dp[i] 代表前i个元素最大上升序列长度
+        int[] dp = new int[l]; // dp[i] 代表以i结尾最大上升序列长度
         Arrays.fill(dp, 1);
         int ans = dp[0];
         for (int i = 1; i < l; i++) {
