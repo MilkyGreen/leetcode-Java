@@ -1,5 +1,6 @@
 package p200.p139;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -52,5 +53,28 @@ public class Solution {
         return dp[n];
     }
 
+
+    public boolean wordBreak2(String s, List<String> wordDict) {
+        int n = s.length();
+        boolean[] dp = new boolean[n+1];// dp[i] 代表0到i是否能被拼接
+        dp[0] = true;
+        for(int i = 1;i<=n;i++){
+            for(int j = i-1;j>=0;j--){
+                if(dp[j] && wordDict.contains(s.substring(j,i))){
+                    dp[i] = true;
+                    break;
+                }
+            }
+        }
+        return dp[n];
+    }
+
+    public static void main(String[] args) {
+        String s = "leetcode";
+        ArrayList<String> list = new ArrayList<>();
+        list.add("leet");
+        list.add("code");
+        System.out.println(new Solution().wordBreak2(s,list));
+    }
 
 }
