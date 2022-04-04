@@ -1,5 +1,7 @@
 package p200.p135;
 
+import java.util.Arrays;
+
 public class Solution2 {
     public int candy(int[] ratings) {
         int n = ratings.length;
