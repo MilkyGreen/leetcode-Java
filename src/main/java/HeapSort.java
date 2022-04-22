@@ -1,12 +1,5 @@
 /**
- * <p>
- * Copyright: Copyright (c) 2021/6/30 22:55
- * <p>
- * Company: 苏州渠成易销网络科技有限公司
- * <p>
- *
- * @author yunmeng.li@successchannel.com
- * @version 1.0.0
+ * 
  */
 public class HeapSort {
 
