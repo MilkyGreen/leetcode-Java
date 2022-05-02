@@ -1,5 +1,10 @@
 package p100.p0040;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Solution3 {
     int[] candidates;
     int n;

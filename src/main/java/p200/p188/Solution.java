@@ -1,5 +1,7 @@
 package p200.p188;
 
+import java.util.Arrays;
+
 public class Solution {
     public int maxProfit(int k, int[] prices) {
         if (prices.length == 0) {
