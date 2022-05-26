@@ -1,4 +1,4 @@
-package p300plus.p763.p1004;
+package p300plus.p1004;
 
 public class Solution {
     public int longestOnes(int[] nums, int k) {
